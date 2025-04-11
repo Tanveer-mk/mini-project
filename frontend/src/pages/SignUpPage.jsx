@@ -167,8 +167,8 @@ const SignUpPage = () => {
       {/* right side */}
 
       <AuthImagePattern
-        title="Join our community"
-        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
+        title="Welcome to ChatSphere"
+        subtitle="Log in or sign up to connect and chat in any language."
       />
     </div>
   );
