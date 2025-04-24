@@ -1,0 +1,20 @@
+{
+  "name": "mini-project",
+  "version": "1.0.0",
+  "description": "ChatSphere: A Real-Time Messaging Platform with Auto Translation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tanveer-mk/mini-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tanveer-mk/mini-project/issues"
+  },
+  "homepage": "https://github.com/Tanveer-mk/mini-project#readme"
+}
