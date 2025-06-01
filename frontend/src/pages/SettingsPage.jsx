@@ -87,7 +87,7 @@ const SettingsPage = () => {
                           ${
                             message.isSent
                               ? "bg-primary text-primary-content"
-                              : "bg-base-200"
+                              : "bg-base-300 text-base-content"
                           }
                         `}
                       >
