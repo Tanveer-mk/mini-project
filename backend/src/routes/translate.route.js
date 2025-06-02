@@ -3,6 +3,6 @@ import { translateTo } from "../controllers/translate.controller.js";
 
 const router = express.Router();
 
-router.post("/:to", translateTo);
+router.post("/", translateTo);
 
 export default router;

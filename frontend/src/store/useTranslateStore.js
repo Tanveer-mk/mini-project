@@ -35,9 +35,11 @@ export const useTranslateStore = create((set, get) => ({
     if (!showTranslate || !targetLang || !text) return null;
 
     try {
-      const res = await axiosInstance.post(`translate/${targetLang}`, {
+      const res = await axiosInstance.post("translate/", {
         text,
+        to: targetLang,
       });
+
       return res.data?.translations?.[0]?.text || null;
     } catch (err) {
       console.error("Translation error:", err);

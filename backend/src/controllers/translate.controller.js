@@ -10,7 +10,8 @@ export const translateTo = async (req, res) => {
   const location = process.env.RESOURCE_REGION;
 
   const text = req.body?.text;
-  let toLanguage = req.params?.to || "en";
+  const toLanguage = req.body.to;
+
   const toLanguages = toLanguage.split(",");
 
   if (!key || !location) {
