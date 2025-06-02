@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { LogOut, MessageSquare, Settings, User } from "lucide-react";
+import { useTranslateStore } from "../store/useTranslateStore";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
+  const { targetLang, setTargetLang } = useTranslateStore();
 
   return (
     <header
@@ -25,6 +27,43 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
+            {authUser && (
+              <select
+                className="select select-bordered select-sm mt-2"
+                value={targetLang}
+                onChange={(e) => setTargetLang(e.target.value)}
+              >
+                <option value="ar">Arabic</option>
+                <option value="as">Assamese</option>
+                <option value="bn">Bangla (Bengali)</option>
+                <option value="zh-Hans">Chinese (Simplified)</option>
+                <option value="nl">Dutch</option>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="gu">Gujarati</option>
+                <option value="hi">Hindi</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="kn">Kannada</option>
+                <option value="ks">Kashmiri</option>
+                <option value="ko">Korean</option>
+                <option value="ml">Malayalam</option>
+                <option value="mr">Marathi</option>
+                <option value="ne">Nepali</option>
+                <option value="or">Odia</option>
+                <option value="pa">Punjabi</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru">Russian</option>
+                <option value="sd">Sindhi</option>
+                <option value="es">Spanish</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="tr">Turkish</option>
+                <option value="ur">Urdu</option>
+                <option value="vi">Vietnamese</option>
+              </select>
+            )}
             <Link
               to={"/settings"}
               className={`
