@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { useChatStore } from "../store/useChatStore";
+import { useTranslateStore } from "../store/useTranslateStore";
 import { Image, Send, X, Languages } from "lucide-react";
 import toast from "react-hot-toast";
-import { useTranslateStore } from "../store/useTranslateStore";
 
 const MessageInput = () => {
   const [text, setText] = useState("");
@@ -10,7 +10,6 @@ const MessageInput = () => {
   const fileInputRef = useRef(null);
   const { sendMessage } = useChatStore();
   const { showTranslate, setShowTranslate } = useTranslateStore();
-
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (!file.type.startsWith("image/")) {
@@ -88,6 +87,7 @@ const MessageInput = () => {
             onChange={handleImageChange}
           />
           <button
+            type="button"
             onClick={() => setShowTranslate(showTranslate)}
             className={`btn btn-circle ${
               showTranslate ? "btn-primary" : "btn"
