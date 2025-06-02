@@ -35,7 +35,7 @@ export const useTranslateStore = create((set, get) => ({
     if (!showTranslate || !targetLang || !text) return null;
 
     try {
-      const res = await axiosInstance.post(`translation/${targetLang}`, {
+      const res = await axiosInstance.post(`translate/${targetLang}`, {
         text,
       });
       return res.data?.translations?.[0]?.text || null;
